@@ -59,4 +59,8 @@ public class FarkleTurn {
 		int newScore = scorer.scoreDice(scoringDice);
 		this.setScore(this.getScore() + newScore);
 	}
+	
+	public boolean isFarkled(ArrayList<Die> dice) {
+		return scorer.isFarkled(dice);
+	}
 }
