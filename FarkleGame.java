@@ -28,4 +28,8 @@ public class FarkleGame {
 		playerIndex = (playerIndex + 1) % players.size();
 		currentPlayer = players.get(playerIndex);
 	}
+	
+	public ArrayList<Player> getPlayers() {
+		return players;
+	}
 }
