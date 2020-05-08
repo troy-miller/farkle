@@ -51,9 +51,17 @@ public class DiePanel extends JPanel {
 	private class ClickListener implements MouseListener {
 		@Override
 		public void mouseClicked(MouseEvent e) {
-			DiePanel.this.setBackground(Color.green);
 			FarkleDie farkleDie = (FarkleDie)DiePanel.this.getDie();
-			farkleDie.setHeld();
+			if (!farkleDie.getPermaHeld()) {
+				if (farkleDie.getHeld()) {
+					DiePanel.this.setBackground(Color.white);
+					farkleDie.resetHeld();
+				}
+				else {
+					DiePanel.this.setBackground(Color.green);
+					farkleDie.setHeld();
+				}
+			}
 		}
 
 		@Override
