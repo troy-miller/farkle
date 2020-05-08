@@ -1,10 +1,12 @@
 
+
 public class Player {
 	//----------------------
 	//Instance Variables
 	//----------------------
 	private String name;
 	private int score;
+	private boolean isGameOver;
 	
 	//----------------------
 	//Constructors
@@ -12,6 +14,7 @@ public class Player {
 	public Player(String aName) {
 		name = aName;
 		score = 0;
+		isGameOver = false;
 	}
 	
 	//----------------------
@@ -27,5 +30,13 @@ public class Player {
 	
 	public void addScore(int aScore) {
 		score += aScore;
+	}
+
+	public boolean isGameOver() {
+		return isGameOver;
+	}
+
+	public void setGameOver(boolean isGameOver) {
+		this.isGameOver = isGameOver;
 	}
 }
